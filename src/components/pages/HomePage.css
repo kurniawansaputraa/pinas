@@ -1,3 +1,5 @@
+@import url('"https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .home-page {
     height: 100vh;
     background-image: url('../../assets/images/beranda2.jpg');
@@ -6,6 +8,35 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 3rem;
     color: white;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
-  }
+    padding-top: 60px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.home-page h1, .home-page p {
+  font-weight: bold;
+}
+
+.home-page-content {
+  display: flex;
+  width: 100%;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.home-page-title {
+  font-style: bold;
+  font-size: 3rem;
+}
