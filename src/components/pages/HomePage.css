@@ -1,0 +1,11 @@
+.home-page {
+    height: 100vh;
+    background-image: url('../../assets/images/beranda2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+  }
