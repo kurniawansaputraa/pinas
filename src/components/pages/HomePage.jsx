@@ -15,6 +15,9 @@ function HomePage() {
           {/* Kolom kanan dibiarkan kosong */}
         </div>
       </div>
+      <div className='home-page-kenapa-pinas'>
+        <h1>Kenapa Pinas?</h1>
+      </div>
     </div>
   );
 }
