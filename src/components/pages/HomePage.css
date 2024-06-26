@@ -1,59 +1,6 @@
 @import url('"https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-.home-page {
+.home {
   font-family: 'Permanent Marker', cursive;
-}
-
-.home-page-content {
-  width: 100%;
-  height: 100vh;
-  background-image: url('../../assets/images/beranda2.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  padding-left: 3rem;
   color: white;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
-  padding-top: 60px;
-}
-
-.home-page h1, .home-page p {
-  font-weight: bold;
-}
-
-.left-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.right-column {
-  flex: 1;
-}
-
-.home-page-title {
-  font-style: bold;
-  font-size: 3rem;
-}
-
-.button-sewa {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  margin-top: 20px;
-  text-transform: uppercase;
-  width: 12rem;
-  border-radius: 5px;
-}
-
-.button-sewa:hover {
-  background-color: white;
-  color: #333;
 }
