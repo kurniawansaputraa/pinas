@@ -18,6 +18,11 @@
     text-decoration: none;
 }
 
+.navbar a:hover {
+    color: #625d78;
+    transition: color 0.5s;
+}
+
 .navbar-logo {
     height: 50px; 
     margin: 0 20px;
@@ -26,10 +31,18 @@
 .btn-nav {
     background-color: #1b1929;
     color: white;
-    border: none;
+    border: 2px solid transparent;
     margin: 0 20px;
     padding: 10px 2rem;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn-nav:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
 }
 
 .navbar-links {
