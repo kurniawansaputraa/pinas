@@ -4,23 +4,31 @@ import './Navbar.css'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className="navbar text-white fixed w-full z-10 top-0 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center w-4">
             <div className="flex-shrink-0">
-              <a href="/">
+              <a href="/" onClick={(e) => handleScroll(e, 'beranda')}>
                 <img className="logo" src="../src/assets/images/PINAS.png" alt="Logo" />
               </a>
             </div>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4 justify-center">
-              <a href="#beranda" className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Beranda</a>
-              <a href="#layanan" className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Layanan</a>
-              <a href="#tentang-kami" className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Tentang Kami</a>
-              <a href="#kontak-kami" className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Kontak Kami</a>
+          <div className="flex-1 flex justify-center pl-4">
+            <div className="hidden md:flex space-x-4">
+              <a href="#beranda" onClick={(e) => handleScroll(e, 'beranda')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Beranda</a>
+              <a href="#layanan" onClick={(e) => handleScroll(e, 'layanan')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Layanan</a>
+              <a href="#tentang-kami" onClick={(e) => handleScroll(e, 'tentang-kami')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Tentang Kami</a>
+              <a href="#kontak-kami" onClick={(e) => handleScroll(e, 'kontak-kami')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Kontak Kami</a>
             </div>
           </div>
           <div className="hidden md:block">
@@ -42,10 +50,10 @@ const Navbar = () => {
       
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#beranda" className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Beranda</a>
-          <a href="#layanan" className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Layanan</a>
-          <a href="#tentang-kami" className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Tentang Kami</a>
-          <a href="#kontak-kami" className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Kontak Kami</a>
+          <a href="#beranda" onClick={(e) => handleScroll(e, 'beranda')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Beranda</a>
+          <a href="#layanan" onClick={(e) => handleScroll(e, 'layanan')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Layanan</a>
+          <a href="#tentang-kami" onClick={(e) => handleScroll(e, 'tentang-kami')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Tentang Kami</a>
+          <a href="#kontak-kami" onClick={(e) => handleScroll(e, 'kontak-kami')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Kontak Kami</a>
           <a href="#sewa" className="bg-white text-indigo-900 hover:bg-gray-200 block px-9 py-2 rounded-md text-base font-medium transition duration-300">Sewa</a>
         </div>
       </div>
