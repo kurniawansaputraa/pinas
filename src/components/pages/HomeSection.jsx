@@ -35,7 +35,7 @@ const HomeSection = () => {
   ];
 
   return (
-    <div id='layanan' className="container mx-auto py-16">
+    <div id='services' className="container mx-auto py-16">
       <h1 className="text-4xl font-bold text-center mb-12 text-white">Produk dan Layanan Pinas</h1>
       {items.map((item, index) => (
         <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">

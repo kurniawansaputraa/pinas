@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 const Navbar = () => {
@@ -6,10 +7,18 @@ const Navbar = () => {
 
   const handleScroll = (e, targetId) => {
     e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+    // Check if we're not on the homepage
+    if (window.location.pathname !== '/') {
+      // Navigate to the homepage first
+      window.location.href = '/';
     }
+    // Wait for the homepage to be loaded, then scroll to the target element
+    setTimeout(() => {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 10); // adjust the timeout value as needed
   };
 
   return (
@@ -18,21 +27,21 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center w-4">
             <div className="flex-shrink-0">
-              <a href="/" onClick={(e) => handleScroll(e, 'beranda')}>
+              <a href="/">
                 <img className="logo" src="../src/assets/images/PINAS.png" alt="Logo" />
               </a>
             </div>
           </div>
           <div className="flex-1 flex justify-center pl-4">
             <div className="hidden md:flex space-x-4">
-              <a href="#beranda" onClick={(e) => handleScroll(e, 'beranda')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Beranda</a>
-              <a href="#layanan" onClick={(e) => handleScroll(e, 'layanan')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Layanan</a>
-              <a href="#tentang-kami" onClick={(e) => handleScroll(e, 'tentang-kami')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Tentang Kami</a>
-              <a href="#kontak-kami" onClick={(e) => handleScroll(e, 'kontak-kami')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Kontak Kami</a>
+              <Link to="/home" onClick={(e) => handleScroll(e, 'home')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Beranda</Link>
+              <Link to="/services" onClick={(e) => handleScroll(e, 'services')} className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Layanan</Link>
+              <Link to="/about" className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Tentang Kami</Link>
+              <Link to="/contact" className="hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Kontak Kami</Link>
             </div>
           </div>
           <div className="hidden md:block">
-            <a href="#sewa" className="bg-white text-indigo-900 hover:bg-gray-200 px-6 py-2 rounded-md text-sm font-medium transition duration-300">Sewa</a>
+            <a href="/sewa" className="bg-white text-indigo-900 hover:bg-gray-200 px-6 py-2 rounded-md text-sm font-medium transition duration-300">Sewa</a>
           </div>
           <div className="-mr-2 flex md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700 focus:text-white">
@@ -50,11 +59,11 @@ const Navbar = () => {
       
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#beranda" onClick={(e) => handleScroll(e, 'beranda')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Beranda</a>
-          <a href="#layanan" onClick={(e) => handleScroll(e, 'layanan')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Layanan</a>
-          <a href="#tentang-kami" onClick={(e) => handleScroll(e, 'tentang-kami')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Tentang Kami</a>
-          <a href="#kontak-kami" onClick={(e) => handleScroll(e, 'kontak-kami')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Kontak Kami</a>
-          <a href="#sewa" className="bg-white text-indigo-900 hover:bg-gray-200 block px-9 py-2 rounded-md text-base font-medium transition duration-300">Sewa</a>
+          <Link to="/home" onClick={(e) => handleScroll(e, 'home')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Beranda</Link>
+          <Link to="/services" onClick={(e) => handleScroll(e, 'services')} className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Layanan</Link>
+          <Link to="/about" className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Tentang Kami</Link>
+          <Link to="/contact" className="hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium transition duration-300">Kontak Kami</Link>
+          <Link to="/sewa" className="bg-white text-indigo-900 hover:bg-gray-200 block px-9 py-2 rounded-md text-base font-medium transition duration-300">Sewa</Link>
         </div>
       </div>
     </nav>
