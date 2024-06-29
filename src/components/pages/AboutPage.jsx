@@ -20,6 +20,7 @@ const About = () => {
         <div className="flex flex-col items-center">
           <img src="src/assets/images/founder/kurniawan.png" alt="Founder 1" className="rounded-full h-32 w-32 mb-2 object-cover" />
           <h3 className="text-lg font-bold">Kurniawan Saputra</h3>
+          <h3 className="text-lg font-bold">As Founder</h3>
           <p className="text-gray-600">312210035</p>
         </div>
         

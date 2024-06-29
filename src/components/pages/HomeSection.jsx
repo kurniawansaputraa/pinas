@@ -6,7 +6,7 @@ const HomeSection = () => {
       imgSrc: 'src/assets/images/blue-125.png',
       title: 'Vespa LX 125 I-Get Facelift',
       description: 'A fresh breeze to the timeless classic.',
-      buttonLink: '#link1',
+      buttonLink: '/sewa',
       prices: {
         oneDay: 'Rp 200.000/hari',
         twoDays: 'Diskon 10% untuk reservasi lebih dari 3 hari'
@@ -16,7 +16,7 @@ const HomeSection = () => {
       imgSrc: 'src/assets/images/green-150.png',
       title: 'Vespa Primavera 150 I-Get ABS Facelift',
       description: 'The iconic symbol of passion is the quintessence of urban chic.',
-      buttonLink: '#link2',
+      buttonLink: '/sewa',
       prices: {
         oneDay: 'Rp 225.000/hari',
         twoDays: 'Diskon 10% untuk reservasi lebih dari 3 hari'
@@ -26,7 +26,7 @@ const HomeSection = () => {
       imgSrc: 'src/assets/images/white-150-abs.png',
       title: 'Vespa GTS Super 150 I-Get ABS Facelift',
       description: 'Perfect for those who like to ride in greater comfort with an elegant and sophisticated look.',
-      buttonLink: '#link3',
+      buttonLink: '/sewa',
       prices: {
         oneDay: 'Rp 275.000/hari',
         twoDays: 'Diskon 10% untuk reservasi lebih dari 3 hari'
