@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Sewa = () => {
-  const [nomorInduk, setNomorInduk] = useState('');
+  const [nomorTlp, setNomorTlp] = useState('');
   const [nama, setNama] = useState('');
   const [vesmet, setVesmet] = useState('vesmet1');
   const [jumlahUnit, setJumlahUnit] = useState(1);
@@ -25,11 +25,11 @@ const Sewa = () => {
       <h1 className="text-3xl font-bold mb-6 pt-6">Form Penyewaan Vesmet</h1>
       <form onSubmit={handleSubmit} className="space-y-6 border-2 border-zinc-700 p-6 rounded shadow-md">
         <div>
-          <label className="block text-sm font-medium">Nomor Induk</label>
+          <label className="block text-sm font-medium">Nomor Telepon</label>
           <input
             type="text"
-            value={nomorInduk}
-            onChange={(e) => setNomorInduk(e.target.value)}
+            value={nomorTlp}
+            onChange={(e) => setNomorTlp(e.target.value)}
             className="bg-transparent mt-1 block w-full p-2 border border-gray-300 rounded-md"
             required
           />
