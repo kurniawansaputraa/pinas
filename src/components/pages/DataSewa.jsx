@@ -17,29 +17,16 @@ const FormData = () => {
     }
   };
 
-  const handleStatusUpdate = async (id, vesmet, jumlahUnit) => {
-    try {
-      // Update status to 'selesai' for the selected sewa
-      await axios.put(`http://localhost:5000/api/sewa/${id}`, { status: 'selesai' });
-
-      // Fetch current kendaraan data to get current jumlah_unit
-      const response = await axios.get('http://localhost:5000/api/kendaraan');
-      const kendaraanData = response.data;
-
-      // Find the selected vesmet in kendaraanData
-      const selectedKendaraan = kendaraanData.find(kendaraan => kendaraan.model === vesmet);
-
-      // Update jumlah_unit by adding the rented units back
-      if (selectedKendaraan) {
-        const updatedJumlahUnit = selectedKendaraan.jumlah_unit + jumlahUnit;
-        await axios.put(`http://localhost:5000/api/kendaraan/${selectedKendaraan.id}`, { jumlah_unit: updatedJumlahUnit });
+  const handleStatusUpdate = (id) => {
+    // Update status to 'selesai' locally
+    const updatedSewaData = sewaData.map(item => {
+      if (item.id === id) {
+        return { ...item, status: 'selesai' };
       }
+      return item;
+    });
 
-      // Refresh data after update
-      fetchSewaData();
-    } catch (error) {
-      console.error('Error updating status:', error);
-    }
+    setSewaData(updatedSewaData);
   };
 
   return (
@@ -76,7 +63,7 @@ const FormData = () => {
                 <td className="border-gray-200 px-6 py-4 whitespace-no-wrap">
                   {item.status === 'aktif' && (
                     <button
-                      onClick={() => handleStatusUpdate(item.id, item.tipe_vespa, item.jumlah_unit)}
+                      onClick={() => handleStatusUpdate(item.id)}
                       className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-md"
                     >
                       Selesai

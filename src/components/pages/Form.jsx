@@ -250,7 +250,7 @@ const Sewa = () => {
           <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md shadow-sm">
             Submit
           </button>
-          <Link to="/form-data" className="bg-transparent bg-blue-600 text-white py-2 px-4 rounded-md shadow-sm">
+          <Link to="/data" className="bg-transparent bg-blue-600 text-white py-2 px-4 rounded-md shadow-sm">
             Lihat Data
           </Link>
         </div>
