@@ -27,7 +27,7 @@ exports.createUlasan = (req, res) => {
         nama: req.body.nama,
         instansi: req.body.instansi,
         email: req.body.email,
-        no_telepon: req.body.no_telepon,
+        tlp: req.body.tlp,
         pesan: req.body.pesan
     };
     Ulasan.create(newUlasan, (err, result) => {
@@ -43,7 +43,7 @@ exports.updateUlasan = (req, res) => {
         nama: req.body.nama,
         instansi: req.body.instansi,
         email: req.body.email,
-        no_telepon: req.body.no_telepon,
+        tlp: req.body.tlp,
         pesan: req.body.pesan
     };
     Ulasan.update(req.params.id, updateUlasan, (err, result) => {

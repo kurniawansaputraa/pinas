@@ -11,7 +11,7 @@ const About = () => {
           Pinas memulai penyewaan vespa matic di Bandung dengan fokus pada kota-kota besar dan pusat bisnis, di mana mobilitas tinggi menjadi kebutuhan utama. Kami menargetkan para pengguna yang menghargai gaya hidup santai dan klasik, baik untuk menikmati kesibukan perkotaan maupun petualangan wisata alam, dengan menawarkan pengalaman transportasi yang ramah lingkungan melalui vespa matic yang ikonis.
         </p>
         <p className="text-lg leading-relaxed py-3">
-          Kami siap melayani dengan senang hati saat anda berada di Jogja, dan akan memberikan service terbaik saat anda menyewa Vespa di Scooterphys. Vespa berdesain retro telah menjadi skutik paling unik, bergaya dan paling dicintai hingga saat ini di dunia.
+          Kami siap melayani dengan senang hati saat anda berada di Bandung, dan akan memberikan service terbaik saat anda menyewa Vespa di Pinas. Vespa berdesain retro telah menjadi skutik paling unik, bergaya dan paling dicintai hingga saat ini di dunia.
         </p>
       </div>
       
@@ -25,9 +25,9 @@ const About = () => {
         </div>
         
         <div className="flex flex-col items-center">
-          <img src="founder2.jpg" alt="Founder 2" className="rounded-full h-32 w-32 mb-2 object-cover" />
-          <h3 className="text-lg font-bold">Nama Pendiri 2</h3>
-          <p className="text-gray-600">Jabatan Pendiri 2</p>
+          <img src="src/assets/images/founder/selma.jpeg" alt="Founder 2" className="rounded-full h-32 w-32 mb-2 object-cover" />
+          <h3 className="text-lg font-bold">Selma Ohoira</h3>
+          <p className="text-gray-600">312210727</p>
         </div>
         
         <div className="flex flex-col items-center">

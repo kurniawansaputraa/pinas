@@ -7,6 +7,7 @@ import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/ContactPage';
 import Footer from './components/layout/Footer';
 import Sewa from './components/pages/Form';
+import Data from './components/pages/DataSewa';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/sewa" element={<Sewa />} />
+          <Route path="/data" element={<Data />} />
         </Routes>
       </div>
       <Footer />

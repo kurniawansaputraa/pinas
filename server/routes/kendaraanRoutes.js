@@ -10,3 +10,4 @@ router.put('/:id', kendaraanController.updateKendaraan);
 router.delete('/:id', kendaraanController.deleteKendaraan);
 
 module.exports = router;
+
